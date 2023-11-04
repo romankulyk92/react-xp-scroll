@@ -4,17 +4,13 @@ import { preloadImages, calcDrawImage } from './utils';
 import { useGlobalState } from './state';
 
 interface SequenceSectionProps {
-  imagesPath: string;
-  imagesType: string;
-  imagesCount: number;
-  start?: string;
-  end?: string;
+    imagesArray: string[];
+    start?: string;
+    end?: string;
 }
 
 export const SequenceSection: FC<SequenceSectionProps> = ({
-  imagesPath,
-  imagesType,
-  imagesCount,
+  imagesArray = [],
   start = 'top top',
   end = '200%',
   ...props
@@ -24,12 +20,8 @@ export const SequenceSection: FC<SequenceSectionProps> = ({
   const [scroller] = useGlobalState('container');
 
   useLayoutEffect(() => {
-    const urls = [];
-    for (let i = 0; i < imagesCount; i++) {
-      urls.push(`${imagesPath}/${i + 1}.${imagesType}`);
-    }
 
-    const images = preloadImages(urls);
+    const images = preloadImages(imagesArray);
 
     let ctx: CanvasRenderingContext2D | null;
     if (sequenceSectionCanvas.current) {
@@ -94,7 +86,7 @@ export const SequenceSection: FC<SequenceSectionProps> = ({
     return () => {
       tl?.kill();
     };
-  }, [end, imagesCount, imagesPath, imagesType, scroller, start]);
+  }, [end, imagesArray, scroller, start]);
 
   return (
     <section className="ns-sequence-section" ref={sequenceSection} {...props}>

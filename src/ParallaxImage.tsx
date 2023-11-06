@@ -71,7 +71,7 @@ export const ParallaxImage: FC<ParallaxImageProps> = ({
 
   return (
     <figure
-      className="ns-parallax-image"
+      className="xp-parallax-image"
       ref={parallaxImage}
       style={{ height: `${containerHeight}` }}
       {...props}
@@ -80,7 +80,7 @@ export const ParallaxImage: FC<ParallaxImageProps> = ({
         ref={parallaxImageInner}
         src={src}
         alt={alt}
-        className="ns-parallax-image__inner"
+        className="xp-parallax-image__inner"
         style={{
           transform: `scale(${imageScale})`,
           objectPosition: `${imageObjectPosition}`,

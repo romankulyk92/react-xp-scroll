@@ -89,8 +89,8 @@ export const SequenceSection: FC<SequenceSectionProps> = ({
   }, [end, imagesArray, scroller, start]);
 
   return (
-    <section className="ns-sequence-section" ref={sequenceSection} {...props}>
-      <canvas className="ns-sequence-section__canvas" ref={sequenceSectionCanvas} />
+    <section className="xp-sequence-section" ref={sequenceSection} {...props}>
+      <canvas className="xp-sequence-section__canvas" ref={sequenceSectionCanvas} />
     </section>
   );
 };

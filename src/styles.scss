@@ -1,40 +1,26 @@
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 100% !important;
-  width: 100% !important;
-  overflow-y: auto !important;
-}
-
-#root {
-  height: 100% !important;
-}
-
-.ns-container {
-  height: 100vh;
+.xp-container {
   margin: 0 !important;
   overflow: hidden !important;
 }
 
-.ns-fixed-element {
+.xp-fixed-element {
   position: fixed !important;
   will-change: top;
 }
 
-.ns-horizontal-section {
+.xp-horizontal-section {
   overflow-x: hidden !important;
   width: 100% !important;
   height: 100% !important;
   position: relative;
 }
 
-.ns-horizontal-section {
+.xp-horizontal-section {
   &__animation-wrap,
   &__pin-wrap {
     display: flex;
     align-items: center;
     position: relative !important;
-    height: 100vh !important;
   }
   &__item {
     padding: 200px 100px;
@@ -45,12 +31,12 @@ body {
   }
 }
 
-.ns-gelly-element {
+.xp-gelly-element {
   display: flex;
   will-change: transform !important;
 }
 
-.ns-parallax-image {
+.xp-parallax-image {
   margin: 0;
   padding: 0;
   overflow: hidden !important;
@@ -69,13 +55,12 @@ body {
   }
 }
 
-.ns-sequence-section {
+.xp-sequence-section {
   position: relative;
-  height: 100vh !important;
 
   &__canvas {
-    max-width: 100vw !important;
-    max-height: 100vh !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
     vertical-align: middle !important;
   }
 }

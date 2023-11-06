@@ -69,9 +69,9 @@ export const HorizontalSection: FC<HorizontalSectionProps> = ({
   }, [addAnimation, toRight, scroller, start]);
 
   return (
-    <section className="ns-horizontal-section" ref={horizontal} {...props}>
-      <div className="ns-horizontal-section__pin-wrap" ref={pinWrap}>
-        <div className="ns-horizontal-section__animation-wrap" ref={animationWrap}>
+    <section className="xp-horizontal-section" ref={horizontal} {...props}>
+      <div className="xp-horizontal-section__pin-wrap" ref={pinWrap}>
+        <div className="xp-horizontal-section__animation-wrap" ref={animationWrap}>
           {children}
         </div>
       </div>

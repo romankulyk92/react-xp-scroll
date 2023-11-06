@@ -73,7 +73,7 @@ export const GellyElement: FC<GellyElementProps> = ({
     trigger,
   ]);
   return (
-    <div className="ns-gelly-element" ref={gellyElement} {...props}>
+    <div className="xp-gelly-element" ref={gellyElement} {...props}>
       {children}
     </div>
   );

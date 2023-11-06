@@ -95,7 +95,7 @@ export const ScrollContainer: FC<ScrollContainerProps> = ({
   ]);
 
   return (
-    <div className="ns-container" {...props} ref={scrollContainer}>
+    <div className="xp-container" {...props} ref={scrollContainer}>
       {children}
     </div>
   );

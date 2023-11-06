@@ -33,7 +33,7 @@ export const FixedElement: FC<FixedElementProps> = ({
   }, [left, right, smoothScrollBar, top]);
   return (
     <div
-      className="ns-fixed-element"
+      className="xp-fixed-element"
       ref={fixedElement}
       style={{ top, left, right }}
       {...props}

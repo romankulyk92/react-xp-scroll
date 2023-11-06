@@ -55,8 +55,8 @@ export const SequenceSection: FC<SequenceSectionProps> = ({
     window.addEventListener(
       'resize',
       (function resize() {
-        ctx!.canvas.width = sequenceSection?.current?.clientWidth || 960 //document.documentElement.clientWidth;
-        ctx!.canvas.height = sequenceSection?.current?.clientHeight || 540 //document.documentElement.clientHeight;
+        ctx!.canvas.width = document.documentElement.clientWidth;
+        ctx!.canvas.height = document.documentElement.clientHeight;
         return resize;
       })()
     );
@@ -89,8 +89,8 @@ export const SequenceSection: FC<SequenceSectionProps> = ({
   }, [end, imagesArray, scroller, start]);
 
   return (
-    <section className="xp-sequence-section" ref={sequenceSection} {...props}>
-      <canvas className="xp-sequence-section__canvas" ref={sequenceSectionCanvas} />
+    <section className="ns-sequence-section" ref={sequenceSection} {...props}>
+      <canvas className="ns-sequence-section__canvas" ref={sequenceSectionCanvas} />
     </section>
   );
 };

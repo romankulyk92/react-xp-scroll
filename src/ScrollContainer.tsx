@@ -27,7 +27,7 @@ export const ScrollContainer: FC<ScrollContainerProps> = ({
   alwaysShowTracks = false,
   continuousScrolling = true,
   delegateTo,
-  activeSmoothScrollOnTouchDevice = true,
+  activeSmoothScrollOnTouchDevice = false,
   disableSmoothScroll = false,
   ...props
 }) => {
@@ -54,8 +54,6 @@ export const ScrollContainer: FC<ScrollContainerProps> = ({
     SmoothScrollbar.use(AllowScrollPlugin, WillChangePlugin);
     const view = scrollContainer.current;
     if (view) {
-        view.style.height = view.parentElement?.clientHeight+'px';
-
       const smoothScroll = SmoothScrollbar.init(view, {
         damping,
         thumbMinSize,
@@ -97,7 +95,7 @@ export const ScrollContainer: FC<ScrollContainerProps> = ({
   ]);
 
   return (
-    <div className="xp-container" {...props} ref={scrollContainer}>
+    <div className="ns-container" {...props} ref={scrollContainer}>
       {children}
     </div>
   );

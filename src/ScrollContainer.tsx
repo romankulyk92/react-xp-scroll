@@ -54,7 +54,7 @@ export const ScrollContainer: FC<ScrollContainerProps> = ({
     SmoothScrollbar.use(AllowScrollPlugin, WillChangePlugin);
     const view = scrollContainer.current;
     if (view) {
-        view.style.height = view.parentElement?.clientHeight;
+        view.style.height = view.parentElement?.clientHeight+'px';
 
       const smoothScroll = SmoothScrollbar.init(view, {
         damping,

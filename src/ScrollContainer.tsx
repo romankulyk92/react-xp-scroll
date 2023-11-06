@@ -27,7 +27,7 @@ export const ScrollContainer: FC<ScrollContainerProps> = ({
   alwaysShowTracks = false,
   continuousScrolling = true,
   delegateTo,
-  activeSmoothScrollOnTouchDevice = false,
+  activeSmoothScrollOnTouchDevice = true,
   disableSmoothScroll = false,
   ...props
 }) => {
